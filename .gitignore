@@ -1,0 +1,14 @@
+.DS_Store
+
+## Build generated
+build/
+DerivedData/
+
+## Various settings
+xcuserdata/
+
+## Other
+*.xcodeproj/*
+*.ipa
+*.dSYM.zip
+*.dSYM

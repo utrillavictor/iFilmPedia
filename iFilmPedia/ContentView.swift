@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var isDark = false
+    @State private var isDark = true
     @State private var isShowingMenu = false
     
     var body: some View {
@@ -24,7 +24,7 @@ struct ContentView: View {
                                 }
                             }) {
                                 Image(systemName: "line.horizontal.3")
-                                    .font(.system(size: 30))
+                                    .font(.system(size: 28))
                             }
                             
                             Spacer()
@@ -41,9 +41,11 @@ struct ContentView: View {
                             .edgesIgnoringSafeArea(.top)
                     )
                     
-                    Spacer()
-                    
-                    Text("Movies here")
+                    ScrollView(.vertical, showsIndicators: false) {
+                        GridView(rows: 3, columns: 2) { (row, col) in
+                            Card()
+                        }
+                    }
                     
                     Spacer()
                 }
